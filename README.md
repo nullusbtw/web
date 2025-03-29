@@ -44,7 +44,7 @@
 
 1. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com/your-repository-link.git
+   git clone https://github.com/nullusbtw/web
    ```
 2. Откройте `index.html` в браузере или используйте локальный сервер.
 
