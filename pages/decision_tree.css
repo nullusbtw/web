@@ -1,0 +1,66 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #171717;
+    color: white;
+    text-align: center;
+}
+.header {
+    background: linear-gradient(to right, #153F66, #2A7CC8); 
+    padding: 12px;
+}
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 25px;
+}
+.algorithms {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+.algorithm {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 15px 30px;
+    border-radius: 20px;
+    font-size: 1.2em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+.algorithm:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
+}
+.algorithm.active {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+    font-weight: bold;
+    color: #EF9B21;
+}
+.back_button_container {
+    margin-top: 20px;
+}
+
+.back_button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1F5D96;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.back_button:hover {
+    background-color: #153F66;
+    transform: scale(1.05);
+}
