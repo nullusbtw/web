@@ -9,10 +9,18 @@ body {
 .header {
     background: linear-gradient(to right, #153F66, #2A7CC8); 
     padding: 12px;
+    position: relative;
 }
 h1 {
     font-size: 2.5em;
     margin-bottom: 25px;
+}
+.logo {
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    width: 150px;
+    height: auto;
 }
 .algorithms {
     display: flex;
