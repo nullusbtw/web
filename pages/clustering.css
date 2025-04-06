@@ -47,6 +47,7 @@ h1 {
     text-decoration: none;
     color: white;
 }
+
 .algorithm:hover {
     transform: scale(1.05);
     background: rgba(255, 255, 255, 0.2);
@@ -55,7 +56,7 @@ h1 {
     background: rgba(255, 255, 255, 0.3);
     transform: scale(1.05);
     font-weight: bold;
-    color: #EF9B21;
+    color: white;
 }
 .back_button_container {
     margin-top: 20px;
@@ -77,4 +78,31 @@ h1 {
 .back_button:hover {
     background-color: #153F66;
     transform: scale(1.05);
+}
+
+.buttons_container {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+.custom_button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    user-select: none;
+}
+
+.custom_button:hover {
+    background-color: #45a049;
 }
