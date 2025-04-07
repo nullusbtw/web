@@ -7,20 +7,27 @@ body {
     text-align: center;
 }
 .header {
-    background: linear-gradient(to right, #153F66, #2A7CC8); 
+    background: linear-gradient(to right, #153F66, #2A7CC8);
     padding: 12px;
-    position: relative;
+    display: flex;
 }
 h1 {
     font-size: 2.5em;
     margin-bottom: 25px;
 }
 .logo {
-    position: absolute;
-    top: 40px;
-    left: 50px;
     width: 150px;
     height: auto;
+    margin: 0 25px 0 25px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.logo:hover {
+    transform: scale(1.05);
+}
+.header-content {
+    flex-direction: column;
+    justify-content: center;
 }
 .algorithms {
     display: flex;
@@ -30,23 +37,40 @@ h1 {
     padding: 20px;
 }
 .algorithm {
-    background: rgba(255, 255, 255, 0.15);
+    background: linear-gradient(to right, rgb(255,255,255,0.1) 40%, rgb(255,255,255,0.2) 50%, rgb(255,255,255,0.1) 60%);
+    background-size: 300% 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     padding: 15px 30px;
     border-radius: 20px;
     font-size: 1.2em;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-    cursor: pointer;
     text-decoration: none;
     color: white;
+    cursor: pointer;
+    background-position: 100% 0%;
+    transition: transform 0.4s ease;
 }
 .algorithm:hover {
+    transition: all 0.4s ease;
     transform: scale(1.05);
-    background: rgba(255, 255, 255, 0.2);
+    background-position: 0% 0%;
+}
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 20px 10px 20px;
 }
 .content h2 {
-    margin-top: 40px;
+    margin-top: 10px;
 }
 .content p {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+}
+.block {
+    box-sizing: border-box;
+    width: calc(50% - 20px);
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background: #232323;
+    margin: 10px;
+    padding: 20px;
 }
