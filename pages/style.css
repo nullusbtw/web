@@ -28,6 +28,9 @@ h1 {
 .header-content {
     flex-direction: column;
     justify-content: center;
+    text-align: center;
+    display: flex;
+    flex: 1;
 }
 .algorithms {
     display: flex;
