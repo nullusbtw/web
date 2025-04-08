@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HITS</title>
+    <link rel="stylesheet" href="astar.css">
+    <script src="astar.js"></script>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="logo-container">
+            <img src="./photos/logo.svg" alt="Logo" class="logo">
+        </a>
+        <div class="header-content">
+            <h1>6-й модуль<br>Алгоритмы приближенных вычислений</h1>
+            <div class="algorithms">
+                <a href="astar.html" class="algorithm active">A*</a>
+                <a href="clustering.html" class="algorithm">Алгоритм кластеризации</a>
+                <a href="test.html" class="algorithm">Генетический алгоритм</a>
+                <a href="test.html" class="algorithm">Муравьиный алгоритм</a>
+                <a href="decision_tree.html" class="algorithm">Дерево решений</a>
+                <a href="test.html" class="algorithm">Нейронная сеть</a>
+            </div>
+        </div>
+    </div>
+    <div id="maze" class="canvas_class">
+        <form name="forma1">
+            <label for="size" class="custom_label">Размер:</label><br>
+            <input type="text" style="margin-top: 10px;" id="size" name="size" autofocus="autofocus" maxlength="2" size="6" class="custom_select"/><br>
+            <input type="button" value="Сгенерировать" onClick="duom();" style="margin-top: 10px;" class="custom_button">
+        </form>
+        <pre id="out"></pre>
+    </div>
+
+    <script src="astar.js"></script>
+</body>
+</html>

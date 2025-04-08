@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #171717;
+    color: white;
+    text-align: center;
+}
+
+.header {
+    background: linear-gradient(to right, #153F66, #2A7CC8);
+    padding: 12px;
+    display: flex;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 25px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    margin: 0 25px 0 25px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    margin-top: 32px;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.header-content {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex: 1;
+}
+
+.algorithms {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.algorithm {
+    background: linear-gradient(to right, rgb(255,255,255,0.1) 40%, rgb(255,255,255,0.2) 50%, rgb(255,255,255,0.1) 60%);
+    background-size: 300% 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 15px 30px;
+    border-radius: 20px;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    background-position: 100% 0%;
+    transition: transform 0.4s ease;
+}
+
+.algorithm:hover {
+    transition: all 0.4s ease;
+    transform: scale(1.05);
+    background-position: 0% 0%;
+}
+
+.algorithm.active {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+    font-weight: bold;
+    color: white;
+}
+
+.custom_button {
+    padding: 10px 20px;
+    background-color: gray;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    user-select: none;
+}
+
+.custom_button:hover {
+    background-color: #555;
+}
+
+.custom_label {
+    font-size: 18px;
+    margin-right: 10px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.custom_select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: gray;
+    color: white;
+    border: none;
+}
+
+.custom_select:hover {
+    background-color: #555;
+}
+
+.canvas_class {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
