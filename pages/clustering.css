@@ -1,10 +1,16 @@
-
 canvas {
-    border: 5px solid black;
+    border: 5px solid #153F66;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 100px;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.4s ease-in-out;
+}
+
+canvas:hover {
+    box-shadow: 0 0 30px 5px rgba(21, 63, 102, 0.7);
 }
 
 .canvas_class {
@@ -21,14 +27,39 @@ body {
     color: white;
     text-align: center;
 }
+
 .header {
-    background: linear-gradient(to right, #153F66, #2A7CC8); 
+    background: linear-gradient(to right, #153F66, #2A7CC8);
     padding: 12px;
+    display: flex;
 }
+
 h1 {
     font-size: 2.5em;
     margin-bottom: 25px;
 }
+
+.logo {
+    width: 150px;
+    height: auto;
+    margin: 0 25px 0 25px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    margin-top: 32px;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.header-content {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex: 1;
+}
+
 .algorithms {
     display: flex;
     flex-wrap: wrap;
@@ -36,48 +67,32 @@ h1 {
     gap: 15px;
     padding: 20px;
 }
+
 .algorithm {
-    background: rgba(255, 255, 255, 0.15);
+    background: linear-gradient(to right, rgb(255,255,255,0.1) 40%, rgb(255,255,255,0.2) 50%, rgb(255,255,255,0.1) 60%);
+    background-size: 300% 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     padding: 15px 30px;
     border-radius: 20px;
     font-size: 1.2em;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-    cursor: pointer;
     text-decoration: none;
     color: white;
+    cursor: pointer;
+    background-position: 100% 0%;
+    transition: transform 0.4s ease;
 }
 
 .algorithm:hover {
+    transition: all 0.4s ease;
     transform: scale(1.05);
-    background: rgba(255, 255, 255, 0.2);
+    background-position: 0% 0%;
 }
+
 .algorithm.active {
     background: rgba(255, 255, 255, 0.3);
     transform: scale(1.05);
     font-weight: bold;
     color: white;
-}
-.back_button_container {
-    margin-top: 20px;
-}
-
-.back_button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #1F5D96;
-    color: white;
-    font-size: 1.2em;
-    border-radius: 10px;
-    text-decoration: none;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-}
-
-.back_button:hover {
-    background-color: #153F66;
-    transform: scale(1.05);
 }
 
 .buttons_container {
@@ -87,10 +102,9 @@ h1 {
     margin-top: 20px;
 }
 
-
 .custom_button {
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: gray;
     color: white;
     border-radius: 10px;
     font-size: 16px;
@@ -104,5 +118,24 @@ h1 {
 }
 
 .custom_button:hover {
-    background-color: #45a049;
+    background-color: #555;
+}
+
+.custom_label {
+    font-size: 18px;
+    margin-right: 10px;
+    color: white;
+}
+
+.custom_select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: gray;
+    color: white;
+    border: none;
+}
+
+.custom_select:hover {
+    background-color: #555;
 }
