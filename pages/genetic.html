@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> HITS </title>
+    <link rel="stylesheet" href="genetic.css">
+</head>
+<body>
+    <div class="header">
+        <a href="home.html" class="logo-container">
+            <img src="./photos/logo.svg" alt="Logo" class="logo">
+        </a>
+        <div class="header-content">
+            <h1>6-й модуль<br>Алгоритмы приближенных вычислений</h1>
+            <div class="algorithms">
+                <a href="astar.html" class="algorithm">A*</a>
+                <a href="clustering.html" class="algorithm">Алгоритм кластеризации</a>
+                <a class="algorithm active">Генетический алгоритм</a>
+                <a href="ant.html" class="algorithm">Муравьиный алгоритм</a>
+                <a href="decision_tree.html" class="algorithm">Дерево решений</a>
+                <a href="neuro.html" class="algorithm">Нейронная сеть</a>
+            </div>
+        </div>
+    </div>
+    <div class="canvas_class">
+        <canvas id="canvas" width="1200" height="700"></canvas>
+    </div>
+    <div class="buttons_container">
+        <div id="clearButton" class="custom_button">Очистить поле</div>
+        <div id="randomButton" class="custom_button">Рандом</div>
+        <div id="algorithmButton" class="custom_button">Запустить алгоритм</div>
+    </div>
+    <script src="genetic.js" charset="windows-1251"></script>
+</body>
+</html>
