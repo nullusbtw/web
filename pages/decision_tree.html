@@ -3,23 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> HITS</title>
+    <title>Дерево решений</title>
     <link rel="stylesheet" href="decision_tree.css">
 </head>
 <body>
     <div class="header">
-        <h1>6-й модуль<br>Алгоритмы приближенных вычислений</h1>
-        <div class="algorithms">
-            <a href="test.html" class="algorithm">A*</a>
-            <a href="clustering.html" class="algorithm">Алгоритм кластеризации</a>
-            <a href="test.html" class="algorithm">Генетический алгоритм</a>
-            <a href="test.html" class="algorithm">Муравьиный алгоритм</a>
-            <a href="decision_tree.html" class="algorithm active">Дерево решений</a>
-            <a href="test.html" class="algorithm">Нейронная сеть</a>
+        <a href="index.html" class="logo-container">
+            <img src="./photos/logo.svg" alt="Logo" class="logo">
+        </a>
+        <div class="header-content">
+            <h1>6-й модуль<br>Алгоритмы приближенных вычислений</h1>
+            <div class="algorithms">
+                <a href="astar.html" class="algorithm">A*</a>
+                <a href="clustering.html" class="algorithm">Кластеризация</a>
+                <a href="test.html" class="algorithm">Генетический алгоритм</a>
+                <a href="test.html" class="algorithm">Муравьиный алгоритм</a>
+                <a href="decision_tree.html" class="algorithm active">Дерево решений</a>
+                <a href="test.html" class="algorithm">Нейронная сеть</a>
+            </div>
         </div>
     </div>
-    <div class="back_button_container">
-        <a href="index.html" class="back_button">На главную</a>
+
+    <div class="main-container">
+        <div id="canvasContainer" class="canvas-container">
+            <div id="tree" class="scroll-container">
+                <canvas id="treeCanvas"></canvas>
+            </div>
+        </div>
+
+        <div class="control-panel">
+            <div class="control-group">
+                <label class="control-label">Обучающая выборка (CSV):</label>
+                <div class="file-upload">
+                    <input type="file" id="trainFile" accept=".csv">
+                    <button id="loadTrainBtn" class="control-button">Загрузить</button>
+                </div>
+                <textarea id="trainData" placeholder="Или вставьте CSV вручную..."></textarea>
+                <button id="buildTreeBtn" class="control-button">Построить дерево</button>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label">Данные для классификации (CSV):</label>
+                <div class="file-upload">
+                    <input type="file" id="classifyFile" accept=".csv">
+                    <button id="loadClassifyBtn" class="control-button">Загрузить</button>
+                </div>
+                <textarea id="classifyData" placeholder="Введите данные для классификации..."></textarea>
+                <button id="classifyBtn" class="control-button">Классифицировать</button>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label">Результаты классификации:</label>
+                <div id="classificationResults" class="results-container"></div>
+            </div>
+        </div>
     </div>
+
+    <script src="decision_tree.js"></script>
 </body>
 </html>
