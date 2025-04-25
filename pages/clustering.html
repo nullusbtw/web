@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> HITS </title>
+    <title>Алгоритм кластеризации</title>
     <link rel="stylesheet" href="clustering.css">
 </head>
 <body>
@@ -24,25 +24,74 @@
         </div>
     </div>
     <div class="canvas_class">
-        <canvas id="canvas" width="1200" height="700"></canvas>
+        <canvas id="canvas" width="1400" height="800"></canvas>
     </div>
     <div class="buttons_container">
-        <div id="clearButton" class="custom_button">Очистить поле</div>
-        <div id="randomButton" class="custom_button">Рандом</div>
-        <div>
-            <label for="clusterCount" class="custom_label">Выберите количество кластеров:</label>
-            <select id="clusterCount" class="custom_select">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-            </select>
+        <div class="button_row">
+            <div id="clearButton" class="custom_button">Очистить поле</div>
+            <div id="randomButton" class="custom_button">Рандом</div>
+            <div>
+                <label for="clusterCount" class="custom_label">Выберите количество кластеров:</label>
+                <select id="clusterCount" class="custom_select">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                </select>
+            </div>
         </div>
-        <div id="algorithmButton" class="custom_button">K-means</div>
+        <div class="button_row">
+            <div id="algorithmButton" class="custom_button">K-means</div>
+            <div id="dbscanButton" class="custom_button">DBSCAN</div>
+            <div id="hierarchicalButton" class="custom_button">Иерархическая кластеризация</div>
+            <div id="compareButton" class="custom_button">Сравнить кластеризации</div>
+        </div>
     </div>
+    <div id="helpButton" class="help_button">?</div>
+    <div id="helpModal" class="modal">
+        <div class="modal-content">
+            <span id="closeHelpModal" class="close">&times;</span>
+            <h2>Пояснение</h2>
+            <p>Кнопка "Рандом" создает на поле 300 случайных точек, которые затем можно использовать для кластеризации с помощью выбранных алгоритмов</p>
+            <p>Каждая точка на поле может принадлежать разным кластерам в зависимости от алгоритма:</p>
+            <ul>
+                <li>
+                    <strong>K-means++:</strong> 
+                    Это алгоритм, который делит данные на заданное количество кластеров, минимизируя расстояние до центроидов. 
+                    Он начинает с выбора начальных центроидов таким образом, чтобы улучшить сходимость.
+                </li>
+                <li>
+                    <strong>DBSCAN:</strong> 
+                    Алгоритм, основанный на плотности. Он выделяет кластеры, где точки расположены близко друг к другу, 
+                    и игнорирует шумовые данные. Подходит для данных с произвольной формой кластеров. 
+                    Если точки пропадают, это означает, что они не принадлежат ни одному кластеру и классифицируются как шумовые данные.
+                </li>
+                <li>
+                    <strong>Иерархическая кластеризация:</strong> 
+                    Постепенно объединяет точки в кластеры, создавая иерархическую структуру. 
+                    Результат можно представить в виде дендрограммы, где пользователь выбирает уровень объединения.
+                </li>
+            </ul>
+            <p>Несоответствия между алгоритмами выделяются цветами:</p>
+            <ul>
+                <li><strong>K-means:</strong> Верхняя часть точки.</li>
+                <li><strong>DBSCAN:</strong> Нижняя часть точки.</li>
+                <li><strong>Иерархическая кластеризация:</strong> Обводка точки.</li>
+            </ul>
+        </div>
+    </div>
+
     <script src="clustering.js"></script>
 </body>
 </html>
