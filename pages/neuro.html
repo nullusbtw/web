@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HITS</title>
+        <link rel="stylesheet" href="neuro.css">
+    </head>
+<body>
+    <div class="header">
+        <a href="index.html" class="logo-container">
+            <img src="./photos/logo.svg" alt="Logo" class="logo">
+        </a>
+        <div class="header-content">
+            <h1>6-й модуль<br>Алгоритмы приближенных вычислений</h1>
+            <div class="algorithms">
+                <a href="astar.html" class="algorithm">A*</a>
+                <a href="clustering.html" class="algorithm">Алгоритм кластеризации</a>
+                <a href="test.html" class="algorithm">Генетический алгоритм</a>
+                <a href="test.html" class="algorithm">Муравьиный алгоритм</a>
+                <a href="decision_tree.html" class="algorithm">Дерево решений</a>
+                <a href="neuro.html" class="algorithm active">Нейронная сеть</a>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h2>Нарисуйте цифру:</h2>
+        <div id="result" class="result">Результат: </div>
+        <div class="canvas_class">
+            
+            <canvas id="drawCanvas" width="200" height="200"></canvas>
+            
+        </div>
+
+        <div class="canvas_class">
+            <button id="clear-button" class="custom_button">Очистить</button>
+            <button id="predict-button" class="custom_button">Распознать</button>
+        </div>
+    </div>
+    <script type="module" src="neuro.js"></script>
+</body>
+</html>

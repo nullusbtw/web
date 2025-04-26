@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HITS</title>
     <link rel="stylesheet" href="astar.css">
-    <script src="astar.js"></script>
 </head>
 <body>
     <div class="header">
@@ -20,19 +19,31 @@
                 <a href="test.html" class="algorithm">Генетический алгоритм</a>
                 <a href="test.html" class="algorithm">Муравьиный алгоритм</a>
                 <a href="decision_tree.html" class="algorithm">Дерево решений</a>
-                <a href="test.html" class="algorithm">Нейронная сеть</a>
+                <a href="neuro.html" class="algorithm">Нейронная сеть</a>
             </div>
         </div>
     </div>
     <div id="maze" class="canvas_class">
         <form name="forma1">
             <label for="size" class="custom_label">Размер:</label><br>
-            <input type="text" style="margin-top: 10px;" id="size" name="size" autofocus="autofocus" maxlength="2" size="6" class="custom_select"/><br>
+            <input id="slider" type="range" min="5" max="31" step="2" value="11">
             <input type="button" value="Сгенерировать" onClick="duom();" style="margin-top: 10px;" class="custom_button">
         </form>
+        <div>
+            <label for="customizeMode" class="custom_label">Выберите количество кластеров:</label>
+            <select id="customizeMode" class="custom_select">
+                <option value="walls">Стены</option>
+                <option value="passes">Проходы</option>
+                <option value="start">Точка старта</option>
+                <option value="finish">Точка финиша</option>
+            </select>
+        </div>
+        <input type="button" value="Запустить алгоритм" onClick="algorithm();" style="margin-top: 10px;" class="custom_button">
         <pre id="out"></pre>
     </div>
-
+    <div class="canvas_class">
+        <canvas id="canvas"></canvas>
+    </div>
     <script src="astar.js"></script>
 </body>
 </html>
