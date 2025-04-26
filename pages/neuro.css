@@ -131,3 +131,31 @@ canvas:hover {
     justify-content: center;
     align-items: center;
 }
+.buttons_container {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.custom_button {
+    padding: 10px 20px;
+    background-color: #2A7CC8;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    user-select: none;
+    margin: 10px;
+}
+
+.custom_button:hover {
+    background-color: #1a5c9e;
+}
