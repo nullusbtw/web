@@ -25,20 +25,14 @@
     </div>
     <div id="maze" class="canvas_class">
         <form name="forma1">
-            <label for="size" class="custom_label">Размер:</label><br>
-            <input id="slider" type="range" min="5" max="31" step="2" value="11">
-            <input type="button" value="Сгенерировать" onClick="duom();" style="margin-top: 10px;" class="custom_button">
+            <label for="size" class="custom_label">Размер:</label>
+            <span id="sliderValue" class="custom_label">11</span><br>
+            <input id="slider" type="range" min="5" max="31" step="2" value="11" oninput="updateSliderValue()">
         </form>
-        <div>
-            <label for="customizeMode" class="custom_label">Выберите количество кластеров:</label>
-            <select id="customizeMode" class="custom_select">
-                <option value="walls">Стены</option>
-                <option value="passes">Проходы</option>
-                <option value="start">Точка старта</option>
-                <option value="finish">Точка финиша</option>
-            </select>
+        <div class="buttons_container">
+            <input type="button" value="Сгенерировать" onClick="duom();" class="custom_button">
+            <input type="button" value="Запустить алгоритм" onClick="algorithm();" class="custom_button">
         </div>
-        <input type="button" value="Запустить алгоритм" onClick="algorithm();" style="margin-top: 10px;" class="custom_button">
         <pre id="out"></pre>
     </div>
     <div class="canvas_class">
