@@ -1,6 +1,13 @@
 var step = 50;
 const canv = document.getElementById("canvas");
 const ctx = canv.getContext("2d");
+
+function updateSliderValue() {
+    const slider = document.getElementById('slider');
+    const sliderValue = document.getElementById('sliderValue');
+    sliderValue.textContent = slider.value;
+}
+
 var maze = {matrix: [], n: 0, start: {x: 0, y: 0}, finish: {x: 0, y: 0}};
 function duom(){
 
